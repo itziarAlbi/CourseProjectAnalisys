@@ -4,7 +4,7 @@ Subject						:Identifies person who performed the activity. Its range is from 1 
 
 Activity					:Activity names. It takes one of these following values: Standing, Sitting, Laying, Walking, Walking Upstairs, Walking Downstairs.
 
-Following lines calculate the mean of each variable according to Subject, Type and Activity. 
+Following lines calculate the mean of each variable according to Subject and Activity. 
 
 For instance, first record of output text file is 
 1 Training Laying 0.22159824394 -0.0405139534294 ... 
