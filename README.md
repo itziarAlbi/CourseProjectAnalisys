@@ -1,15 +1,14 @@
 ==================================================================
 Course Project- Getting and Cleaning Data
 Version 1.0
-==================================================================
-Author: Iciar Albillos
-==================================================================
+
 This repo explains how all the documents work and how they are connected.
 
 R script: run_analisys.R
+
 CodeBook.md: describes all variables that take part in output file. 
 
-==================================================================
+
 Usage: The script is divided into smaller functions where main function is called run().
 To run the script type simply: run()
 
