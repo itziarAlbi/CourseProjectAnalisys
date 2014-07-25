@@ -1,14 +1,15 @@
 PROJECT - POINT 5- VARIABLES IN TIDY DATA SET
 
-Subject						:Identifies person who performed the activity. Its range is from 1 to 30.
+Subject						:Identifies the person who performed the activity. Its range is from 1 to 30.
 
-Activity					:Activity names. It takes one of these following values: Standing, Sitting, Laying, Walking, Walking Upstairs, Walking Downstairs.
+Activity					:Activity names. It takes one of the following values: Standing, Sitting, Laying, Walking, Walking Upstairs, Walking Downstairs.
 
-Following lines calculate the mean of each variable according to Subject and Activity. 
+The following lines calculate the mean of each variable according to Subject and Activity. 
 
 For instance, first record of output text file is 
 1 Training Laying 0.22159824394 -0.0405139534294 ... 
-that means for subject identified by "1", in training data set and for laying activity, the mean of Time.BodyAcc.Mean.X has value 0.22159824394, the mean of Time.BodyAcc.Mean.Y has value -0.0405139534294 and so on for each colum.
+That means that for subject identified as "1", for training data set and the laying activity, the mean of Time.BodyAcc.Mean.X is 0.22159824394, the mean of Time.BodyAcc.Mean.Y is -0.0405139534294 and so on for each column
+
 
 Time.BodyAcc.Mean.X         :Mean of time body linear acceleration in X direction
 
