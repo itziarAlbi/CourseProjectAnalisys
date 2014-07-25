@@ -29,4 +29,4 @@ Afterwards, it uses activity names described in activity_label.txt file to name 
 By using aggregate() command it calculates the average of each variable for each activity and each subject. Besides, the script sots data frame by Subject and Activity columns in ascending order.
 
 
-Finally it writes the output in a text file named "result.txt".
+Finally it writes the output in a text file named "result.txt" with 180 rows and 69 columns.
