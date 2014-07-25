@@ -3,6 +3,7 @@ Course Project- Getting and Cleaning Data
 Version 1.0
 
 This repo explains how all of the documents work and how they are connected to each other.
+
 R script: run_analisys.R
 
 CodeBook.md: describes all variables that take part in output file. 
@@ -24,6 +25,7 @@ Then, it extracts mean and standard deviation columns for each measurement, runn
 Afterwards, it uses activity names described in activity_label.txt file to name the activities in the data set (1 is Walking and so on). It sets corresponding labels to the data set with descriptive variable names. Replaces _X, _Y or _Z by .X, .Y and .Z, replaces tBody by Time.Body and tGravity by Time.Gravity, replaces fBody by Frequency.Body and fGravity by Frequency.Gravity, replaces -mean by .Mean and -std by .StdDvt and replaces "()" by a blank.
 
 
-Using aggregate() command it calculates the average of each variable for each activity and each subject. Besides, the script sorts data frame by Subject and Activity columns ascending.
+By using aggregate() command it calculates the average of each variable for each activity and each subject. Besides, the script sots data frame by Subject and Activity columns in ascending order.
 
-Finally it writes output in a text file named "result.txt".
+
+Finally it writes the output in a text file named "result.txt".
