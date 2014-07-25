@@ -2,7 +2,7 @@ PROJECT - POINT 5- VARIABLES IN TIDY DATA SET
 
 Subject						:Identifies person who performed the activity. Its range is from 1 to 30. 
 Activity					:Activity names. It takes one of these following values: Standing, Sitting, Laying, Walking, Walking Upstairs, Walking Downstairs.
--------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
 
 Following lines calculate the mean of each variable according to Subject, Type and Activity. 
 For instance, first record of output text file is 
@@ -49,7 +49,6 @@ Time.BodyGyroMag.Mean       :Mean of time body gyroscope using the Euclidean nor
 Time.BodyGyroMag.StdDvt     :Standard deviation of time body gyroscope using the Euclidean norm  
 Time.BodyGyroJerkMag.Mean   :Mean of time body gyroscope to obtain Jerk signals using the Euclidean norm    
 Time.BodyGyroJerkMag.StdDvt :Standard deviation of time body gyroscope to obtain Jerk signals using the Euclidean norm 
---------------------------------------------------------------------------------------------  
 Frequency.BodyAcc.Mean.X    :Mean of frequency body linear acceleration in X direction   
 Frequency.BodyAcc.Mean.Y    :Mean of frequency body linear acceleration in Y direction   
 Frequency.BodyAcc.Mean.Z    :Mean of frequency body linear acceleration in Z direction    
