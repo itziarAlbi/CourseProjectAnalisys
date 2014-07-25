@@ -3,14 +3,14 @@
 #If don't exist, it throws an error with information message and script stops
 checkDirectories<-function(rootDirectoryName){	
 	if (!file.exists(rootDirectoryName)){
-		stop("Directory UCI HAR Dataset doesn't exist");		
+		stop("UCI HAR Dataset Directory doesn't exist");		
 	}else{
 		testDirectory<-paste0(rootDirectoryName,"/test");
 		trainDirectory<-paste0(rootDirectoryName,"/train");
 		
 		if (  !file.exists(testDirectory) 
 			| !file.exists(trainDirectory)	 ){
-			stop("Directory test or train don't exist");		
+			stop("Test or train directories don't exist");		
 		}
 	}
 }
