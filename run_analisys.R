@@ -1,6 +1,6 @@
 ##################################################################################
-#This function checks whether root directory exists and their subdirectories "test" and "train" too
-#If don't exist, it throws an error with information message and script stops
+#This function checks if root directory and its subdirectories "test" and "train" exist.
+#If they don't exist, it throws an error with information and script stops
 checkDirectories<-function(rootDirectoryName){	
 	if (!file.exists(rootDirectoryName)){
 		stop("UCI HAR Dataset Directory doesn't exist");		
@@ -79,15 +79,15 @@ merges<-function(rootDirectoryName){
 }
 #################################################################################
 #Extracts only the measurements on the mean and standard deviation for each measurement.
-#This funcions runs column names, and if the column name has the pattern "mean()" or "std()", it retrieves the index. 
-#With all indexes it makes a new dataset.
+#This funcions runs column names, and if the column name contains the pattern "mean()" or "std()", it retrieves the index. 
+#Makes a new dataset with all gathered indexes
 
 getMeanAndDeviationColumns<-function(mergeData){
 	columnNamesMerge<-names(mergeData);
 	#Initialize a vector
 	selectedColumn<-c();
 	for (i in 1:length(columnNamesMerge)){
-		#if the column name has the pattern "mean()" or "std()" or "activities" or "types" or "subjects" column, it adds the index in selectedColumn vector, otherwise the index is a 0.
+		#if the column name contains the pattern "mean()" or "std()" or "activities" or "types" or "subjects" column, it adds the index in selectedColumn vector, otherwise the index is a 0.
 		if (grepl(".*mean\\(\\).*", columnNamesMerge[i]) 
 			| grepl(".*std\\(\\).*", columnNamesMerge[i])
 			| grepl("Subjects", columnNamesMerge[i])
@@ -104,7 +104,7 @@ getMeanAndDeviationColumns<-function(mergeData){
 	meanDeviationData;
 }
 ##################################################################################
-#Uses activity names described in activity_label.txt file to name the activities in the data set.
+#Uses activity names as described in activity_label.txt file to name the activities in the data set.
 labelActivities<-function (rootDirectoryName, mergeData){
 
 		activityFile<-paste0(rootDirectoryName, "/activity_labels.txt");
@@ -119,8 +119,7 @@ labelActivities<-function (rootDirectoryName, mergeData){
 }
 
 ##################################################################################
-#Function that sets appropriately labels to the data set with descriptive variable names.
-setVariableNames<-function(dataFrame){
+#Function which sets the corresponding labels to the data set with descriptive variable names.
 
 	columnNames<-names(dataFrame);
 	for (i in 4:length(columnNames)){
@@ -183,7 +182,7 @@ calculateAverage<-function(dataFrame){
 	average;
 }
 ##################################################################################
-#Function that writes a dataFrame in a text file, removing quotes for colNames and values, and not writing row names
+#Function that writes a dataFrame in a text file, removing quotes for colNames and values, and ignoring row names
 writeFile<-function(dataFrame, fileName){
 	write.table(dataFrame, fileName, quote = FALSE, row.names=FALSE);
 }
@@ -205,7 +204,7 @@ run<-function(){
 	mergeLabeled<-setVariableNames(mergeLabelColumnActivity);
 	#5-Calculates the average of each variable for each activity and each subject
 	average<-calculateAverage(mergeLabeled);
-	#6-Writes output in a text file
+	#6-Writes the output in a text file
 	writeFile(average, "result.txt");
 	
 }
