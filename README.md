@@ -4,9 +4,10 @@ Version 1.0
 
 This repo explains how all of the documents work and how they are connected to each other.
 
-R script: run_analisys.R
 
 CodeBook.md: describes all variables that take part in output file. 
+
+R script: run_analisys.R
 
 
 Usage: The script is divided into smaller functions where main function is called run().
