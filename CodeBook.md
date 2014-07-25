@@ -1,8 +1,7 @@
 PROJECT - POINT 5- VARIABLES IN TIDY DATA SET
 
-Subject						:Identifies person who performed the activity. Its range is from 1 to 30. 
+Subject						:Identifies person who performed the activity. Its range is from 1 to 30
 Activity					:Activity names. It takes one of these following values: Standing, Sitting, Laying, Walking, Walking Upstairs, Walking Downstairs.
----------------------------------------------------------------------------------------------------------
 
 Following lines calculate the mean of each variable according to Subject, Type and Activity. 
 For instance, first record of output text file is 
