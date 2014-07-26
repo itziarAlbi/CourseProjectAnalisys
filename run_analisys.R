@@ -119,7 +119,6 @@ labelActivities<-function (rootDirectoryName, mergeData){
 }
 
 ##################################################################################
-##################################################################################
 #Function that sets appropriately labels to the data set with descriptive variable names.
 setVariableNames<-function(dataFrame){
 
