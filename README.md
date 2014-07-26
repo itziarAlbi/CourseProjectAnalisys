@@ -23,7 +23,7 @@ Secondly it reads train and test files and merges testing data frame with traini
 
 Then, it extracts mean and standard deviation columns for each measurement, running column names, and if the column name contains the pattern "mean()" or "std()", it retrieves the index. So the new data frame has 10299 rows and 69 columns. 
 
-Afterwards, it uses activity names described in activity_label.txt file to name the activities in the data set (1 is Walking and so on). It sets corresponding labels to the data set with descriptive variable names. Replaces _X, _Y or _Z by .X, .Y and .Z, replaces tBody by Time.Body and tGravity by Time.Gravity, replaces fBody by Frequency.Body and fGravity by Frequency.Gravity, replaces -mean by .Mean and -std by .StdDvt and replaces "()" by a blank.
+Afterwards, it uses activity names described in activity_label.txt file to name the activities in the data set (1 is Walking and so on). It sets corresponding labels to the data set with descriptive variable names. Replaces _X, _Y or _Z by X, Y and Z, replaces tBody by TimeBody and tGravity by TimeGravity, replaces fBody by FrequencyBody and fGravity by FrequencyGravity, replaces mean by Mean and std by StdDvt and replaces "()" by a blank.
 
 
 By using aggregate() command it calculates the average of each variable for each activity and each subject. Besides, the script sots data frame by Subject and Activity columns in ascending order.
