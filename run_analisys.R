@@ -145,7 +145,7 @@ setVariableNames<-function(dataFrame){
 			colnames(dataFrame)[i] <-gsub("tGravity", "FrequencyGravity", columnNames[i]);			
 		}		
 		columnNames[i]<-colnames(dataFrame)[i];
-		#These following lines replaces -mean by .Mean and -std by .StdDvt
+		#These following lines replaces mean by Mean and std by StdDvt
 		if (grepl(".*mean.*", columnNames[i])){
 			colnames(dataFrame)[i] <-gsub("mean", "Mean", columnNames[i]);			
 		}
