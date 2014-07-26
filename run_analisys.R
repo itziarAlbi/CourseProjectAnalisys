@@ -119,42 +119,38 @@ labelActivities<-function (rootDirectoryName, mergeData){
 }
 
 ##################################################################################
-#Function which sets the corresponding labels to the data set with descriptive variable names.
+##################################################################################
+#Function that sets appropriately labels to the data set with descriptive variable names.
+setVariableNames<-function(dataFrame){
 
 	columnNames<-names(dataFrame);
 	for (i in 4:length(columnNames)){
-		#These following lines replaces _X, _Y or _Z by .X, .Y and .Z
-		if (grepl(".*-X.*", columnNames[i])){
-			colnames(dataFrame)[i] <-gsub("-X", ".X", columnNames[i]);			
-		}
-		if (grepl(".*-Y.*", columnNames[i])){
-			colnames(dataFrame)[i] <-gsub("-Y", ".Y", columnNames[i]);
-		}		
-		if (grepl(".*-Z.*", columnNames[i])){
-			colnames(dataFrame)[i] <-gsub("-Z", ".Z", columnNames[i]);
+		#These following lines replaces _X, _Y or _Z by X, Y and Z
+		if (grepl(".*-.*", columnNames[i])){
+			colnames(dataFrame)[i] <-gsub("-", "", columnNames[i]);			
 		}
 		columnNames[i]<-colnames(dataFrame)[i];
-		#These following lines replaces tBody by Time.Body and tGravity by Time.Gravity
+		#These following lines replaces tBody by TimeBody and tGravity by TimeGravity
 		if (grepl(".*tBody.*", columnNames[i])){
-			colnames(dataFrame)[i] <-gsub("tBody", "Time.Body", columnNames[i]);			
+			colnames(dataFrame)[i] <-gsub("tBody", "TimeBody", columnNames[i]);			
 		}		
 		if (grepl(".*tGravity.*", columnNames[i])){
-			colnames(dataFrame)[i] <-gsub("tGravity", "Time.Gravity", columnNames[i]);			
+			colnames(dataFrame)[i] <-gsub("tGravity", "TimeGravity", columnNames[i]);			
 		}	
-		#These following lines replaces fBody by Frequency.Body and fGravity by Frequency.Gravity		
+		#These following lines replaces fBody by FrequencyBody and fGravity by FrequencyGravity		
 		if (grepl(".*fBody.*", columnNames[i])){
-			colnames(dataFrame)[i] <-gsub("fBody", "Frequency.Body", columnNames[i]);			
+			colnames(dataFrame)[i] <-gsub("fBody", "FrequencyBody", columnNames[i]);			
 		}		
 		if (grepl(".*fGravity.*", columnNames[i])){
-			colnames(dataFrame)[i] <-gsub("tGravity", "Frequency.Gravity", columnNames[i]);			
+			colnames(dataFrame)[i] <-gsub("tGravity", "FrequencyGravity", columnNames[i]);			
 		}		
 		columnNames[i]<-colnames(dataFrame)[i];
 		#These following lines replaces -mean by .Mean and -std by .StdDvt
 		if (grepl(".*mean.*", columnNames[i])){
-			colnames(dataFrame)[i] <-gsub("-mean", ".Mean", columnNames[i]);			
+			colnames(dataFrame)[i] <-gsub("mean", "Mean", columnNames[i]);			
 		}
 		if (grepl(".*std.*", columnNames[i])){
-			colnames(dataFrame)[i] <-gsub("-std", ".StdDvt", columnNames[i]);	
+			colnames(dataFrame)[i] <-gsub("std", "StdDvt", columnNames[i]);	
 		}	
 		columnNames[i]<-colnames(dataFrame)[i];
 		#These following lines replaces BodyBody by Body
